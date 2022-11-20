@@ -1,6 +1,6 @@
 <template>
     <div class="sidebar">
-      <div class="text-h3 font-weight-bold title"> WEB APP </div>
+      <div class="text-h3 font-weight-bold title">SISTEMA DE VERIFICACION</div>
       <div class="menu-items">
             <router-link to="/" active-class="active" tag="button" exact class="side-btn">
                 <div class="link-container">
