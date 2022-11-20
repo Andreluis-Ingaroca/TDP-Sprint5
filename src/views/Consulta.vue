@@ -9,7 +9,7 @@
           <v-img :aspect-ratio="16/9" src="https://www.collinsdictionary.com/images/full/medicine_524556844_1000.jpg">
             <v-expand-transition>
               <div v-if="hover" class="d-flex transition-fast-in-fast-out blue darken-2 v-card--reveal text-h8 white--text px-10 pt-10" style="height: 100%;">
-                Aquí podrá consultar una medicina mediante su codigo. Los datos mostrados en nuestro sistema aparecerán de acuerdo al codigo ingresado.
+                Aquí podrá consultar una medicina mediante su código. Los datos mostrados en nuestro sistema aparecerán de acuerdo al código ingresado.
               </div>
             </v-expand-transition>
           </v-img>
@@ -31,30 +31,30 @@
       <div class="pt-5" align="center" justify="center">
         <v-card v-if="hide == false" color="#55B4B0" rounded="xl" class="mx-10" max-width="57%">
           <v-row>
-            <div class="pl-15 pr-15">
+            <div class="pl-12 pr-15">
               <v-row>            
                 <v-card-title class="txtN">{{ name }}</v-card-title>
               </v-row>
-              <v-card-title class="inf">INFORMATION</v-card-title>
+              <v-card-title class="inf">INFORMACION</v-card-title>
               <v-row class="pl-3 pt-1">
-                <v-card-subtitle class="sub">Pharmaceutical Form:</v-card-subtitle>
-                <v-card-subtitle class="data pl-0"> {{ form }}</v-card-subtitle>
+                <v-card-subtitle class="sub">Forma farmacéutica:</v-card-subtitle>
+                <v-card-subtitle class="data pl-2"> {{ form }}</v-card-subtitle>
               </v-row>
               <v-row class="pl-3 pt-1">
-                <v-card-subtitle class="sub">Concentration: </v-card-subtitle>
-                <v-card-subtitle class="data pl-15"> {{ concentration }}</v-card-subtitle>
+                <v-card-subtitle class="sub">Concentración: </v-card-subtitle>
+                <v-card-subtitle class="data pl-14"> {{ concentration }}</v-card-subtitle>
               </v-row>
               <v-row class="pl-3 pt-1">
-                <v-card-subtitle class="sub">Expiration Date: </v-card-subtitle>
-                <v-card-subtitle class="data pl-12"> {{ expiration }}</v-card-subtitle>
+                <v-card-subtitle class="sub">Fecha de expiración: </v-card-subtitle>
+                <v-card-subtitle class="data pl-3"> {{ expiration }}</v-card-subtitle>
               </v-row>
               <v-row class="pl-3 pt-1">
-                <v-card-subtitle class="sub">Updated Quantity: </v-card-subtitle>
-                <v-card-subtitle class="data pl-7"> {{ quantity }}</v-card-subtitle>
+                <v-card-subtitle class="sub">Cantidad actualizada: </v-card-subtitle>
+                <v-card-subtitle class="data pl-1"> {{ quantity }}</v-card-subtitle>
               </v-row>
               <v-row class="pl-3 pt-1">
-                <v-card-subtitle class="sub">Barcode - Lot: </v-card-subtitle>
-                <v-card-subtitle class="data pl-15"> {{ barcode }}</v-card-subtitle>
+                <v-card-subtitle class="sub">Lote - Código: </v-card-subtitle>
+                <v-card-subtitle class="data pl-16"> {{ barcode }}</v-card-subtitle>
               </v-row>
             </div>
             <div>
@@ -64,12 +64,12 @@
         </v-card>
       </div>
 
-      <div v-if="snb == true" align="center" justify="center">
+      <div v-if="snb == true" align="center" justify="center" class="mt-15">
         <v-card v-model="snackbar" rounded="xl" class="mx-10 blue darken-2" max-width="60%">
           <v-row>
             <v-card-title class="justify-center text-h5 pt-5 pb-5 font-weight-black">{{ text }}</v-card-title>
             <v-spacer></v-spacer>
-            <v-btn text-right class="text-h5 mr-12 mt-5 red darken-2" @click="snb = false">Close</v-btn>
+            <v-btn text-right class="text-h5 mr-12 mt-5 red darken-2" @click="snb = false">Cerrar</v-btn>
           </v-row>
         </v-card>
         <!-- <v-snackbar v-model="snackbar" :timeout="-1" :value="true" bottom :multi-line="multiLine" color="primary" align="center" justify="center">{{ text }}
@@ -160,8 +160,8 @@
             if (this.hide == true) {
                 this.snb = true;
                 this.snackbar = true;
-                this.text = 'CODIGO ERRADO';
-                console.log('CODE NO IDENTIFICADO')
+                this.text = 'CODIGO INGRESADO NO REGISTRADO';
+                console.log('CODIGO INGRESADO NO REGISTRADO')
             }
         },
 
